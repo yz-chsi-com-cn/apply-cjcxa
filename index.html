@@ -2,14 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    <link rel="dns-prefetch" href="//github.githubassets.com">
-    <link rel="dns-prefetch" href="//avatars.githubusercontent.com">
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2026年全国硕士研究生招生考试初试成绩查询</title>
     <style>
         /* 完全1:1还原样式 */
@@ -522,7 +515,7 @@
                 <div class="form-group">
                     <div class="form-row">
                         <label class="form-label">报名单位</label>
-                        <input type="text" class="form-input" value="10689西安交通大学" readonly style="background: #f5f5f5;">
+                        <input type="text" class="form-input" value="10698西安交通大学" readonly style="background: #f5f5f5;">
                     </div>
                 </div>
 
@@ -571,7 +564,7 @@
 
         <div class="main-container" style="margin-top: 20px;">
             <div class="page-header">
-                <h1 class="page-title">2025年部分考生初试成绩查询</h1>
+                <h1 class="page-title">2026年部分考生初试成绩查询</h1>
                 <p class="page-subtitle">本系统所有数据均为招生单位提供，招生单位对查询结果负责解释。</p>
             </div>
 
@@ -580,45 +573,49 @@
                 <table class="score-table">
                     <tr>
                         <td width="120" class="score-label">姓名</td>
-                        <td class="score-value" id="resultName">李金烨</td>
+                        <td class="score-score" id="resultName">李金烨</td>
                     </tr>
                     <tr>
                         <td class="score-label">报名号</td>
-                        <td class="score-value" id="resultApplyNo">102862023001234</td>
+                        <td class="score-score" id="resultApplyNo">370178593</td>
                     </tr>
                     <tr>
                         <td class="score-label">准考证号</td>
-                        <td class="score-value" id="resultExamNo">102862023001234</td>
+                        <td class="score-score" id="resultExamNo">106986103600994</td>
                     </tr>
                     <tr>
                         <td class="score-label">总分</td>
-                        <td class="total-score" id="totalScore">352</td>
+                        <td class="score-score" id="totalScore">352</td>
                     </tr>
                     <tr>
                         <td class="score-label">第一门</td>
-                        <td class="score-value" id="subject1">(101)思想政治理论：<span id="score1">60</span></td>
+                        <td class="score-score" id="subject1">(101)思想政治理论：<span id="score1">60</span></td>
                     </tr>
                     <tr>
                         <td class="score-label">第二门</td>
-                        <td class="score-value" id="subject2">(202)英语二：<span id="score2">65</span></td>
+                        <td class="score-score" id="subject2">(202)英语二：<span id="score2">65</span></td>
                     </tr>
                     <tr>
                         <td class="score-label">第三门</td>
-                        <td class="score-value" id="subject3">(302)数学二：<span id="score3">140</span></td>
+                        <td class="score-score" id="subject3">(302)数学二：<span id="score3">140</span></td>
                     </tr>
                     <tr>
                         <td class="score-label">第四门</td>
-                        <td class="score-value" id="subject4">(408)计算机专业基础综合：<span id="score4">87</span></td>
+                        <td class="score-score" id="subject4">(874)数字信号处理技术：<span id="score4">87</span></td>
+                    </tr>
+                    <tr>
+                        <td class="score-label">备注</td>
+                        <td class="score-score" id="subject5"><span id="score5">无</span></td>
                     </tr>
                 </table>
 
                 <!-- 备注 -->
                 <div class="hint-section" style="margin-top: 20px;">
                     <p class="hint-text">
-                        <span style="color: #333; font-weight: bold;">备注：</span>工程管理专业中的总分参考排名：<span id="ranking" style="color: #333; font-weight: bold;">暂无</span>
+                        <span style="color: #333; font-weight: bold;"></span>本系统所有数据均为招生单位提供，招生单位对查询结果负责解释。<span id="ranking" style="color: #333; font-weight: bold;"></span>
                     </p>
                     <p class="hint-text" style="margin-top: 10px;">
-                        注：若查询的成绩为负值，表示有缺考、违纪等情况。若仍对查询结果有疑问，请咨询相应的招生单位。
+                        若查询的成绩为负值，表示有缺考、违纪等情况。若仍对查询结果有疑问，请咨询相应的招生单位。
                     </p>
                 </div>
 
@@ -650,7 +647,7 @@
         // ============ 配置区 ============
         const CONFIG = {
             account: {
-                examNumber: "102862023001234",  // 你的准考证号
+                examNumber: "106986103600994",  // 你的准考证号
                 name: "李金烨",                     // 你的姓名
                 idCard: "220302200303260616"    // 你的身份证号
             },
@@ -686,16 +683,16 @@
             { code: "10700", name: "西安理工大学", enabled: true },
             { code: "10701", name: "西安电子科技大学", enabled: true },
             { code: "10702", name: "西安工业大学", enabled: true },
-            { code: "10703", name: "西安建筑科技大学", enabled: false },
+            { code: "10703", name: "西安建筑科技大学", enabled: true },
             { code: "10704", name: "西安科技大学", enabled: true },
             { code: "10705", name: "西安石油大学", enabled: true },
-            { code: "10706", name: "陕西科技大学", enabled: false },
-            { code: "10707", name: "陕西医药大学", enabled: false },
-            { code: "10708", name: "陕西电力大学", enabled: false },
-            { code: "10709", name: "陕西建筑技术学院", enabled: false },
-            { code: "10712", name: "陕西农林科技大学", enabled: false },
-            { code: "10713", name: "陕西中医药大学", enabled: false },
-            { code: "10714", name: "陕西师范大学", enabled: false }
+            { code: "10706", name: "陕西科技大学", enabled: true },
+            { code: "10707", name: "陕西医药大学", enabled: true },
+            { code: "10708", name: "陕西电力大学", enabled: true },
+            { code: "10709", name: "陕西建筑技术学院", enabled: true },
+            { code: "10712", name: "陕西农林科技大学", enabled: true },
+            { code: "10713", name: "陕西中医药大学", enabled: true },
+            { code: "10714", name: "陕西师范大学", enabled: true }
         ];
 
         // 页面切换
