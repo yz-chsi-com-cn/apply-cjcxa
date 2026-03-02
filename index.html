@@ -156,17 +156,40 @@
             background: #e6f2ff;
         }
 
-        .school-code {
-            color: #666;
+        /* 院校详情页面 - 图一的界面 */
+        .school-detail-section {
+            padding: 20px 30px;
         }
 
-        .school-name {
+        .school-info {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .info-row {
+            margin-bottom: 15px;
+            display: flex;
+        }
+
+        .info-label {
+            width: 150px;
+            color: #666;
+            font-weight: bold;
+        }
+
+        .info-value {
+            flex: 1;
             color: #333;
         }
 
-        .school-disabled {
-            color: #999;
-            cursor: not-allowed;
+        .info-value a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .info-value a:hover {
+            text-decoration: underline;
         }
 
         /* 提示信息 - 第1张图底部 */
@@ -192,8 +215,8 @@
 
         .query-btn {
             padding: 8px 40px;
-            background: #0066cc;
-            color: white;
+            background: white;
+            color: #0066cc;
             border: none;
             border-radius: 3px;
             font-size: 16px;
@@ -243,74 +266,184 @@
             text-align: center;
         }
 
-        /* 页面2：登录页 - 完全匹配第2张图 */
-        .login-container {
-            max-width: 600px;
-            margin: 30px auto;
+        /* 页面2：登录页 - 使用提供的中国研究生招生信息网登录界面 */
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            min-height: 100vh;
         }
 
-        .login-box {
-            background: white;
-            padding: 20px;
-        }
-
-        /* 黄色提示框 - 完全匹配第2张图 */
-        .login-notice {
-            background: #fff8e6;
-            border: 1px solid #ffeeba;
-            padding: 15px;
-            margin-bottom: 20px;
-        }
-
-        .login-notice h2 {
-            color: #333;
-            font-size: 18px;
-            margin-bottom: 5px;
-        }
-
-        .login-notice p {
-            color: #666;
-            font-size: 14px;
-        }
-
-        /* 表单区域 */
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-row {
+        .left-panel {
+            flex: 1;
+            background-color: #f0f7ff;
             display: flex;
             align-items: center;
-            margin-bottom: 10px;
+            justify-content: center;
+            padding: 40px;
         }
 
-        .form-label {
-            width: 100px;
-            color: #333;
-            font-size: 14px;
-        }
-
-        .form-label .required {
-            color: #ff0000;
-        }
-
-        .form-input {
+        .right-panel {
             flex: 1;
-            padding: 8px 10px;
-            border: 1px solid #ddd;
-            border-radius: 3px;
+            display: flex;
+            flex-direction: column;
+            padding: 40px;
+            background-color: white;
+        }
+
+        .page2-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .page2-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .page2-nav-links {
+            display: flex;
+            gap: 15px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .page2-nav-links a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .page2-nav-links a:hover {
+            color: #0066cc;
+        }
+
+        .login-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-title {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .login-subtitle {
+            color: #666;
+            margin-bottom: 40px;
+            text-align: center;
             font-size: 14px;
         }
 
-        .form-input:focus {
-            border-color: #0066cc;
-            outline: none;
+        .input-group {
+            width: 100%;
+            margin-bottom: 20px;
         }
 
-        .hint-text {
+        .input-field {
+            width: 100%;
+            padding: 15px 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .input-field input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #1890ff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .login-btn:hover {
+            background-color: #096dd9;
+        }
+
+        .links {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .links a {
             color: #666;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .links a:hover {
+            color: #0066cc;
+        }
+
+        .other-login {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .other-login-label {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .social-login {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .social-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .wechat {
+            background-color: #07c160;
+        }
+
+        .alipay {
+            background-color: #1677ff;
+        }
+
+        .page2-footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #999;
             font-size: 12px;
-            margin-left: 10px;
         }
 
         /* 页面3：成绩页 - 完全匹配第3张图 */
@@ -389,15 +522,15 @@
             <div class="header-container">
                 <div class="logo">研招网</div>
                 <div class="nav-links">
-                    <a href="#" class="nav-link">首页</a>
-                    <a href="#" class="nav-link">国家政策</a>
-                    <a href="#" class="nav-link">资讯</a>
-                    <a href="#" class="nav-link">院校库</a>
-                    <a href="#" class="nav-link">硕士目录</a>
-                    <a href="#" class="nav-link">网报公告</a>
-                    <a href="#" class="nav-link">统考网报</a>
-                    <a href="#" class="nav-link">网上确认</a>
-                    <a href="#" class="nav-link" style="background: rgba(255,255,255,0.2); padding: 2px 5px; border-radius: 2px;">成绩查询</a>
+                    <a href="https://yz.chsi.com.cn/" class="nav-link">首页</a>
+                    <a href="https://yz.chsi.com.cn/kyzx/zcdh/" class="nav-link">国家政策</a>
+                    <a href="https://yz.chsi.com.cn/kyzx/kydt/" class="nav-link">资讯</a>
+                    <a href="https://yz.chsi.com.cn/sch/" class="nav-link">院校库</a>
+                    <a href="https://yz.chsi.com.cn/zsml/" class="nav-link">硕士目录</a>
+                    <a href="https://yz.chsi.com.cn/sswbgg/" class="nav-link">网报公告</a>
+                    <a href="https://yz.chsi.com.cn/yzwb/" class="nav-link">统考网报</a>
+                    <a href="https://account.chsi.com.cn/passport/login?entrytype=yzgr&service=https%3A%2F%2Fyz.chsi.com.cn%2Fwsqr%2Fj_spring_cas_security_check" class="nav-link">网上确认</a>
+                    <a href="https://yz-chsi-com-cn.github.io/apply-cjcxa/" class="nav-link" style="background: rgba(255,255,255,0.2); padding: 2px 5px; border-radius: 2px;">成绩查询</a>
                 </div>
             </div>
         </div>
@@ -427,7 +560,7 @@
                             <th>院校名称</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="schoolTableBody">
                         <!-- 院校通过JS生成 -->
                     </tbody>
                 </table>
@@ -438,11 +571,6 @@
                 <p class="hint-text">
                     <span class="highlight">注：</span>列表中显示为"灰色"的，代表此招生单位未设置查询方式。
                 </p>
-            </div>
-
-            <!-- 查询按钮 -->
-            <div class="btn-section">
-                <button class="query-btn" onclick="goToPage2()">查询</button>
             </div>
         </div>
 
@@ -465,63 +593,53 @@
         </div>
     </div>
 
-    <!-- 页面2：登录页 -->
-    <div class="page" id="page2">
+    <!-- 页面1A：院校详情页（点击院校后显示） -->
+    <div class="page" id="page1A">
         <div class="top-header">
             <div class="header-container">
                 <div class="logo">研招网</div>
                 <div class="nav-links">
-                    <a href="#" class="nav-link">首页</a>
-                    <a href="#" class="nav-link">国家政策</a>
-                    <a href="#" class="nav-link">资讯</a>
-                    <a href="#" class="nav-link">院校库</a>
-                    <a href="#" class="nav-link">硕士目录</a>
-                    <a href="#" class="nav-link">网报公告</a>
-                    <a href="#" class="nav-link">统考网报</a>
-                    <a href="#" class="nav-link">网上确认</a>
-                    <a href="#" class="nav-link" style="background: rgba(255,255,255,0.2); padding: 2px 5px; border-radius: 2px;">成绩查询</a>
+                    <a href="https://yz.chsi.com.cn/" class="nav-link">首页</a>
+                    <a href="https://yz.chsi.com.cn/kyzx/zcdh/" class="nav-link">国家政策</a>
+                    <a href="https://yz.chsi.com.cn/kyzx/kydt/" class="nav-link">资讯</a>
+                    <a href="https://yz.chsi.com.cn/sch/" class="nav-link">院校库</a>
+                    <a href="https://yz.chsi.com.cn/zsml/" class="nav-link">硕士目录</a>
+                    <a href="https://yz.chsi.com.cn/sswbgg/" class="nav-link">网报公告</a>
+                    <a href="https://yz.chsi.com.cn/yzwb/" class="nav-link">统考网报</a>
+                    <a href="https://account.chsi.com.cn/passport/login?entrytype=yzgr&service=https%3A%2F%2Fyz.chsi.com.cn%2Fwsqr%2Fj_spring_cas_security_check" class="nav-link">网上确认</a>
+                    <a href="https://yz-chsi-com-cn.github.io/apply-cjcxa/" class="nav-link" style="background: rgba(255,255,255,0.2); padding: 2px 5px; border-radius: 2px;">成绩查询</a>
                 </div>
             </div>
         </div>
 
-        <div class="login-container">
-            <div class="login-box">
-                <div class="login-notice">
-                    <h2>2026年部分考生初试成绩查询</h2>
-                    <p>本系统所有数据均为招生单位提供，招生单位对查询结果负责确认。</p>
-                </div>
+        <div class="main-container">
 
-                <div class="form-group">
-                    <div class="form-row">
-                        <label class="form-label"><span class="required">*</span> 姓名</label>
-                        <input type="text" class="form-input" id="nameInput" placeholder="请输入您的姓名">
+
+            <div class="school-detail-section">
+                <h2 id="currentSchoolName" style="color: black; margin-bottom: 20px; text-align: center;">西安交通大学</h2>
+
+                <div class="school-info">
+                    <div class="info-row">
+                        <div class="info-label">查询时间：</div>
+                        <div class="info-value">2026-02-28 09:00 — 2026-04-30 23:59</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">查询网址：</div>
+                        <div class="info-value">
+                            <a href="https://yz-chsi-com-cn.github.io/apply-cjcxa/" target="_blank">https://yz-chsi-com-cn.github.io/apply-cjcxa/</a><button class="query-btn" onclick="goToPage2()">查询</button>
+
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-value">为保证考生隐私，此招生单位已设置登录后才可查询成绩，请使用网报时注册的用户名和密码登录查询。</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">招生单位发布的信息：</div>
+                        <div class="info-value">暂未发布相关信息</div>
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <div class="form-row">
-                        <label class="form-label"><span class="required">*</span> 证件号码</label>
-                        <input type="text" class="form-input" id="idCardInput" placeholder="请输入您的证件号码">
-                    </div>
-                </div>
 
-                <div class="form-group">
-                    <div class="form-row">
-                        <label class="form-label"><span class="required">*</span> 准考证号</label>
-                        <input type="text" class="form-input" id="examNoInput" placeholder="请输入您的准考证号">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <div class="form-row">
-                        <label class="form-label">报名单位</label>
-                        <input type="text" class="form-input" value="10698西安交通大学" readonly style="background: #f5f5f5;">
-                    </div>
-                </div>
-
-                <div class="btn-section">
-                    <button class="query-btn" onclick="checkLogin()">查询</button>
-                </div>
             </div>
         </div>
 
@@ -543,21 +661,100 @@
         </div>
     </div>
 
+    <!-- 页面2：中国研究生招生信息网登录界面 -->
+    <div class="page" id="page2">
+        <div class="container">
+            <div class="left-panel">
+                <div class="illustration">
+                    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="400" height="300" fill="#f0f7ff"/>
+                        <circle cx="100" cy="100" r="30" fill="#e6f2ff"/>
+                        <circle cx="300" cy="80" r="20" fill="#d9edff"/>
+                        <path d="M50 150 Q100 100 150 150 T250 150" stroke="#bae7ff" stroke-width="3" fill="none"/>
+                        <ellipse cx="150" cy="200" rx="30" ry="40" fill="#1890ff"/>
+                        <circle cx="150" cy="160" r="25" fill="#fff"/>
+                        <ellipse cx="150" cy="130" rx="20" ry="8" fill="#333"/>
+                        <rect x="130" y="130" width="40" height="15" fill="#333"/>
+                        <circle cx="80" cy="180" r="8" fill="#52c41a"/>
+                        <circle cx="320" cy="200" r="6" fill="#1890ff"/>
+                        <circle cx="100" cy="50" r="5" fill="#ff7a45"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="right-panel">
+                <div class="page2-header">
+                    <div class="page2-logo">
+                        <span class="logo-icon">🎓</span>
+                        <span>中国研究生招生信息网</span>
+                    </div>
+                    <div class="page2-nav-links">
+                        <a href="#">首页</a> |
+                        <a href="#">帮助中心</a> |
+                        <a href="#">联系我们</a>
+                    </div>
+                </div>
+
+                <div class="login-container">
+                    <h1 class="login-title">登录</h1>
+                    <p class="login-subtitle">请使用 学信网账号 进行登录</p>
+
+                    <div class="input-group">
+                        <div class="input-field">
+                            <span>👤</span>
+                            <input type="text" id="usernameInput" placeholder="请输入手机号" value="">
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-field">
+                            <span>🔒</span>
+                            <input type="password" id="passwordInput" placeholder="请输入密码" value="">
+                        </div>
+                    </div>
+
+                    <button class="login-btn" onclick="checkLogin()">登录</button>
+
+                    <div class="links">
+                        <a href="#">找回密码</a>
+                        <a href="#">注册</a>
+                    </div>
+
+                    <div class="other-login">
+                        <div class="other-login-label">其他登录方式</div>
+                        <div class="social-login">
+                            <div class="social-btn wechat">
+                                <span>💬</span>
+                            </div>
+                            <div class="social-btn alipay">
+                                <span>支</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="page2-footer">
+                        Copyright © 2003-2026 学信网 All Rights Reserved
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- 页面3：成绩页 -->
     <div class="page" id="page3">
         <div class="top-header">
             <div class="header-container">
                 <div class="logo">研招网</div>
                 <div class="nav-links">
-                    <a href="#" class="nav-link">首页</a>
-                    <a href="#" class="nav-link">国家政策</a>
-                    <a href="#" class="nav-link">资讯</a>
-                    <a href="#" class="nav-link">院校库</a>
-                    <a href="#" class="nav-link">硕士目录</a>
-                    <a href="#" class="nav-link">网报公告</a>
-                    <a href="#" class="nav-link">统考网报</a>
-                    <a href="#" class="nav-link">网上确认</a>
-                    <a href="#" class="nav-link" style="background: rgba(255,255,255,0.2); padding: 2px 5px; border-radius: 2px;">成绩查询</a>
+                    <a href="https://yz.chsi.com.cn/" class="nav-link">首页</a>
+                    <a href="https://yz.chsi.com.cn/kyzx/zcdh/" class="nav-link">国家政策</a>
+                    <a href="https://yz.chsi.com.cn/kyzx/kydt/" class="nav-link">资讯</a>
+                    <a href="https://yz.chsi.com.cn/sch/" class="nav-link">院校库</a>
+                    <a href="https://yz.chsi.com.cn/zsml/" class="nav-link">硕士目录</a>
+                    <a href="https://yz.chsi.com.cn/sswbgg/" class="nav-link">网报公告</a>
+                    <a href="https://yz.chsi.com.cn/yzwb/" class="nav-link">统考网报</a>
+                    <a href="https://account.chsi.com.cn/passport/login?entrytype=yzgr&service=https%3A%2F%2Fyz.chsi.com.cn%2Fwsqr%2Fj_spring_cas_security_check" class="nav-link">网上确认</a>
+                    <a href="https://yz-chsi-com-cn.github.io/apply-cjcxa/" class="nav-link" style="background: rgba(255,255,255,0.2); padding: 2px 5px; border-radius: 2px;">成绩查询</a>
                 </div>
             </div>
         </div>
@@ -646,10 +843,10 @@
     <script>
         // ============ 配置区 ============
         const CONFIG = {
+            // 唯一账号
             account: {
-                examNumber: "106986103600994",  // 你的准考证号
-                name: "李金烨",                     // 你的姓名
-                idCard: "220302200303260616"    // 你的身份证号
+                username: "13351589885",  // 手机号
+                password: "925137ljy"     // 唯一密码
             },
             scores: {
                 total: 352,                     // 总分
@@ -658,26 +855,22 @@
                     { code: "202", name: "英语二", score: 65 },
                     { code: "302", name: "数学二", score: 140 },
                     { code: "408", name: "计算机专业基础综合", score: 87 }
-                ],
-                ranking: 278                     // 专业排名
-            },
-            applyInfo: {
-                school: "西安交通大学",
-                applyNo: "102862023001234"
+                ]
             }
         };
 
         // 省份数据
         const provinces = [
-            "北京", "天津", "河北", "山西", "安徽", "辽宁", "吉林", "黑龙江",
-            "上海", "江苏", "浙江", "福建", "江西", "山东", "河南", "湖北",
-            "湖南", "广东", "广西", "海南", "四川", "贵州", "云南", "陕西",
-            "甘肃", "青海", "宁夏", "新疆", "重庆", "内蒙古"
+            "北京", "天津", "河北", "山西", "内蒙古", "辽宁", "吉林", "黑龙江",
+            "上海", "江苏", "浙江", "安徽", "福建", "江西", "山东", "河南", "湖北",
+            "湖南", "广东", "广西", "海南", "重庆", "四川", "贵州", "云南", "西藏",
+            "陕西", "甘肃", "青海", "宁夏", "新疆"
         ];
 
-        // 院校数据 - 根据第1张图的表格
-        const schools = [
-            { code: "10697", name: "西北大学", enabled: true },
+        // 不同省份的院校数据
+        const provinceSchools = {
+            "陕西": [
+                { code: "10697", name: "西北大学", enabled: true },
             { code: "10698", name: "西安交通大学", enabled: true },
             { code: "10699", name: "西北工业大学", enabled: true },
             { code: "10700", name: "西安理工大学", enabled: true },
@@ -693,7 +886,117 @@
             { code: "10712", name: "陕西农林科技大学", enabled: true },
             { code: "10713", name: "陕西中医药大学", enabled: true },
             { code: "10714", name: "陕西师范大学", enabled: true }
-        ];
+            ],
+            "山西": [
+                { code: "10108", name: "山西大学", enabled: true },
+                { code: "10110", name: "太原理工大学", enabled: true },
+                { code: "10112", name: "中北大学", enabled: true },
+                { code: "10113", name: "太原科技大学", enabled: false },
+                { code: "10114", name: "山西医科大学", enabled: true },
+                { code: "10118", name: "山西师范大学", enabled: false },
+                { code: "10119", name: "太原师范学院", enabled: true },
+                { code: "10120", name: "山西大同大学", enabled: false },
+                { code: "10121", name: "山西财经大学", enabled: true },
+                { code: "10122", name: "山西中医药大学", enabled: false },
+                { code: "10123", name: "长治医学院", enabled: false },
+                { code: "10124", name: "忻州师范学院", enabled: false },
+                { code: "10125", name: "山西农业大学", enabled: true },
+                { code: "10126", name: "内蒙古大学", enabled: false },
+                { code: "10127", name: "山西工程技术学院", enabled: false },
+                { code: "10128", name: "山西应用科技学院", enabled: false }
+            ],
+            "北京": [
+                { code: "10001", name: "北京大学", enabled: true },
+                { code: "10002", name: "中国人民大学", enabled: true },
+                { code: "10003", name: "清华大学", enabled: true },
+    { code: "10004", name: "北京交通大学", enabled: true },
+    { code: "10005", name: "北京工业大学", enabled: true },
+    { code: "10006", name: "北京航空航天大学", enabled: true },
+    { code: "10007", name: "北京理工大学", enabled: true },
+    { code: "10008", name: "北京科技大学", enabled: true },
+    { code: "10009", name: "北方工业大学", enabled: true },
+    { code: "10010", name: "北京化工大学", enabled: true },
+    { code: "10011", name: "北京工商大学", enabled: true },
+    { code: "10012", name: "北京服装学院", enabled: true },
+    { code: "10013", name: "北京邮电大学", enabled: true },
+    { code: "10015", name: "北京印刷学院", enabled: true },
+    { code: "10016", name: "北京建筑大学", enabled: true },
+    { code: "10017", name: "北京石油化工学院", enabled: true },
+    { code: "10018", name: "北京电子科技学院", enabled: true },
+    { code: "10019", name: "中国农业大学", enabled: true },
+    { code: "10020", name: "北京农学院", enabled: true },
+    { code: "10022", name: "北京林业大学", enabled: true },
+    { code: "10023", name: "北京协和医学院", enabled: true },
+    { code: "10025", name: "首都医科大学", enabled: true },
+    { code: "10026", name: "北京中医药大学", enabled: true },
+    { code: "10027", name: "北京师范大学", enabled: true },
+    { code: "10028", name: "首都师范大学", enabled: true },
+    { code: "10029", name: "首都体育学院", enabled: true },
+    { code: "10030", name: "北京外国语大学", enabled: true },
+    { code: "10031", name: "北京第二外国语学院", enabled: true },
+    { code: "10032", name: "北京语言大学", enabled: true },
+    { code: "10033", name: "中国传媒大学", enabled: true },
+    { code: "10034", name: "中央财经大学", enabled: true },
+    { code: "10036", name: "对外经济贸易大学", enabled: true },
+    { code: "10037", name: "北京物资学院", enabled: true },
+    { code: "10038", name: "首都经济贸易大学", enabled: true },
+    { code: "10040", name: "外交学院", enabled: true },
+    { code: "10041", name: "中国人民公安大学", enabled: true },
+    { code: "10042", name: "国际关系学院", enabled: true },
+    { code: "10043", name: "北京体育大学", enabled: true },
+    { code: "10045", name: "中央音乐学院", enabled: true },
+    { code: "10046", name: "中国音乐学院", enabled: true },
+    { code: "10047", name: "中央美术学院", enabled: true },
+    { code: "10048", name: "中央戏剧学院", enabled: true },
+    { code: "10049", name: "中国戏曲学院", enabled: true },
+    { code: "10050", name: "北京电影学院", enabled: true },
+    { code: "10051", name: "北京舞蹈学院", enabled: true },
+    { code: "10052", name: "中央民族大学", enabled: true },
+    { code: "10053", name: "中国政法大学", enabled: true },
+    { code: "10054", name: "华北电力大学", enabled: true },
+    { code: "11149", name: "中华女子学院", enabled: true },
+    { code: "11232", name: "北京信息科技大学", enabled: true },
+    { code: "11413", name: "中国矿业大学(北京)", enabled: true },
+    { code: "11414", name: "中国石油大学(北京)", enabled: true },
+    { code: "11415", name: "中国地质大学(北京)", enabled: true },
+    { code: "11417", name: "北京联合大学", enabled: true },
+    { code: "11418", name: "北京城市学院", enabled: true },
+    { code: "11625", name: "中国青年政治学院", enabled: true },
+    { code: "12453", name: "中国劳动关系学院", enabled: true },
+    { code: "14430", name: "中国科学院大学", enabled: true },
+    { code: "14596", name: "中国社会科学院大学", enabled: true },
+    { code: "80401", name: "北京国家会计学院", enabled: true },
+    { code: "80901", name: "中国科学技术信息研究所", enabled: true },
+    { code: "81601", name: "中国财政科学研究院", enabled: true },
+    { code: "82001", name: "商务部国际贸易经济合作研究院", enabled: true },
+
+
+
+            ],
+            "上海": [
+                { code: "10246", name: "复旦大学", enabled: true },
+                { code: "10247", name: "同济大学", enabled: true },
+                { code: "10248", name: "上海交通大学", enabled: true },
+                { code: "10249", name: "华东理工大学", enabled: false },
+                { code: "10250", name: "上海理工大学", enabled: true },
+                { code: "10251", name: "上海海事大学", enabled: false },
+                { code: "10252", name: "东华大学", enabled: true },
+                { code: "10253", name: "上海电力大学", enabled: false },
+                { code: "10254", name: "上海海洋大学", enabled: false },
+                { code: "10255", name: "上海中医药大学", enabled: false },
+                { code: "10256", name: "华东师范大学", enabled: true },
+                { code: "10257", name: "上海师范大学", enabled: true },
+                { code: "10258", name: "上海外国语大学", enabled: false },
+                { code: "10259", name: "上海财经大学", enabled: true },
+                { code: "10260", name: "上海对外经贸大学", enabled: false }
+            ]
+
+        };
+
+        // 当前选中的省份
+        let currentProvince = "陕西";
+        // 当前选中的院校
+        let currentSchool = null;
 
         // 页面切换
         function showPage(pageId) {
@@ -703,95 +1006,133 @@
             document.getElementById(pageId).classList.add('active');
         }
 
-        // 初始化页面1
-        function initPage1() {
-            // 初始化省份
+        // 初始化省份
+        function initProvinces() {
             const provinceList = document.getElementById('provinceList');
             provinceList.innerHTML = '';
+
             provinces.forEach(province => {
                 const btn = document.createElement('button');
                 btn.className = 'province-item';
                 btn.textContent = province;
                 btn.onclick = () => {
+                    // 更新当前选中的省份
+                    currentProvince = province;
+
+                    // 更新按钮状态
                     document.querySelectorAll('.province-item').forEach(item => {
                         item.classList.remove('active');
                     });
                     btn.classList.add('active');
+
+                    // 刷新院校列表
+                    renderSchools(province);
                 };
+
+                // 默认选中陕西
                 if (province === "陕西") {
                     btn.classList.add('active');
                 }
+
                 provinceList.appendChild(btn);
             });
+        }
 
-            // 初始化院校表格
-            const schoolTable = document.querySelector('#schoolTable tbody');
-            schoolTable.innerHTML = '';
+        // 渲染院校列表
+        function renderSchools(province) {
+            const schoolTableBody = document.getElementById('schoolTableBody');
+            const schools = provinceSchools[province] || [];
+
+            // 清空表格
+            schoolTableBody.innerHTML = '';
+
+            if (schools.length === 0) {
+                // 如果没有该省份的数据
+                schoolTableBody.innerHTML = `
+                    <tr>
+                        <td colspan="2" style="text-align: center; color: #999;">暂无该省份的院校数据</td>
+                    </tr>
+                `;
+                return;
+            }
+
+            // 填充院校数据
             schools.forEach((school, index) => {
                 const row = document.createElement('tr');
+
                 if (!school.enabled) {
                     row.style.color = '#999';
-                }
-                row.onclick = () => {
-                    if (school.enabled) {
-                        document.querySelectorAll('#schoolTable tr').forEach(r => {
+                    row.style.cursor = 'not-allowed';
+                } else {
+                    row.onclick = () => {
+                        // 清除其他行的选中状态
+                        document.querySelectorAll('#schoolTableBody tr').forEach(r => {
                             r.classList.remove('active');
                         });
+
+                        // 设置当前行选中
                         row.classList.add('active');
-                    }
-                };
+
+                        // 保存当前选中的院校
+                        currentSchool = school;
+
+                        // 更新院校详情页的标题
+                        document.getElementById('currentSchoolName').textContent = school.name;
+
+                        // 直接跳转到院校详情页
+                        showPage('page1A');
+                    };
+                }
+
                 row.innerHTML = `
                     <td>${school.code}</td>
                     <td>${school.name}</td>
                 `;
-                schoolTable.appendChild(row);
+
+                schoolTableBody.appendChild(row);
             });
         }
 
-        // 去页面2
+        // 去页面2（从院校详情页）
         function goToPage2() {
             showPage('page2');
         }
 
         // 返回页面1
         function goToPage1() {
+            // 重置当前选中的院校
+            currentSchool = null;
             showPage('page1');
+
+            // 重新初始化
+            initProvinces();
+            renderSchools(currentProvince);
         }
 
         // 登录验证
         function checkLogin() {
-            const name = document.getElementById('nameInput').value.trim();
-            const idCard = document.getElementById('idCardInput').value.trim();
-            const examNo = document.getElementById('examNoInput').value.trim();
+            const username = document.getElementById('usernameInput').value.trim();
+            const password = document.getElementById('passwordInput').value.trim();
 
-            if (!name || !idCard || !examNo) {
-                alert('请填写所有必填信息');
+            if (!username || !password) {
+                alert('请填写用户名和密码');
                 return;
             }
 
-            if (name !== CONFIG.account.name) {
-                alert('考生姓名错误');
-                return;
+            // 验证唯一账号
+            if (username === CONFIG.account.username && password === CONFIG.account.password) {
+                // 验证通过，显示成绩页
+                showPage('page3');
+            } else {
+                // 账号或密码错误
+                alert('用户名或密码错误！');
             }
-
-            if (idCard !== CONFIG.account.idCard) {
-                alert('证件号码错误');
-                return;
-            }
-
-            if (examNo !== CONFIG.account.examNumber) {
-                alert('准考证号错误');
-                return;
-            }
-
-
-
-            showPage('page3');
         }
 
         // 初始化
         window.onload = function() {
-            initPage1();
+            initProvinces();
+            renderSchools(currentProvince);
         };
     </script>
 </body>
